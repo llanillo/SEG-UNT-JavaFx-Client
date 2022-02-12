@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.SVGPath?>
+
+<GridPane fx:id="gridPane" prefHeight="600.0" prefWidth="800.0" styleClass="white-background" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seg.view.controller.principal.commission.ManagerTableController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="13.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="4.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="4.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="13.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="2.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="2.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="8.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints fillHeight="false" minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Pane fx:id="topPane" GridPane.columnSpan="2147483647" GridPane.rowSpan="2">
+         <styleClass>
+            <String fx:value="pane-shadow" />
+            <String fx:value="white-background" />
+         </styleClass></Pane>
+      <Pane fx:id="bottomPane" prefHeight="200.0" prefWidth="200.0" styleClass="lightgray-background" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" />
+      <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.columnSpan="7" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="commissionLabel" styleClass="title-label" text="NOMBRE_COMISION" />
+            <Label fx:id="countLabel" styleClass="subtitle-label" text="(CANTIDAD_ARCHIVOS)" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <children>
+            <Label styleClass="sort-label" text="Ordenar por " />
+            <JFXComboBox fx:id="sortComboBox" maxWidth="1.7976931348623157E308" styleClass="comboBox" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox fx:id="searchHbox" alignment="CENTER" prefHeight="${gridPane.height*0.03}" styleClass="search-box" GridPane.columnIndex="7" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <children>
+            <Button fx:id="glassBtn" maxHeight="1.7976931348623157E308" mnemonicParsing="false" styleClass="glass-btn" HBox.hgrow="ALWAYS">
+               <graphic>
+                  <SVGPath fx:id="glassSvg" content="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+               </graphic>
+            </Button>
+            <JFXTextField fx:id="searchTextfield" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Buscar documento..." styleClass="search-textfield" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <JFXComboBox fx:id="commissionComboBox" labelFloat="true" maxWidth="1.7976931348623157E308" promptText="Comisión" styleClass="comboBox" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <JFXButton fx:id="disapproveBtn" defaultButton="true" maxWidth="1.7976931348623157E308" onAction="#disapproveBtnClick" prefHeight="${gridPane.height*0.04}" styleClass="disapprove-btn" text="Denegar" GridPane.columnIndex="8" GridPane.rowIndex="1">
+         <graphic>
+            <SVGPath fx:id="disapproveSvg" content="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="approveBtn" defaultButton="true" maxWidth="1.7976931348623157E308" onAction="#approveBtnClick" prefHeight="${gridPane.height*0.04}" styleClass="approve-btn" text="Aprobar" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <graphic>
+            <SVGPath fx:id="approveSvg" content="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+         </graphic></JFXButton>
+      <JFXButton fx:id="refreshBtn" maxWidth="1.7976931348623157E308" onAction="#refreshBtnClick" prefHeight="${gridPane.height*0.04}" styleClass="refresh-btn" text="Actualizar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <graphic>
+            <SVGPath fx:id="refreshSvg" content="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" />
+         </graphic>
+      </JFXButton>
+      <JFXTreeTableView fx:id="tableView" onMouseClicked="#tableViewClick" showRoot="false" styleClass="table" GridPane.columnSpan="2147483647" GridPane.rowIndex="3">
+         <columns>
+            <TreeTableColumn editable="false" maxWidth="${tableView.width*0.06}" minWidth="${tableView.width*0.06}" prefWidth="${tableView.width*0.06}" sortable="false" />
+            <TreeTableColumn fx:id="actionColumn" editable="false" maxWidth="${tableView.width*0.07}" minWidth="${tableView.width*0.07}" prefWidth="${tableView.width*0.07}" text="Acción" />
+            <TreeTableColumn fx:id="titleColumn" editable="false" maxWidth="${tableView.width*0.45}" minWidth="${tableView.width*0.15}" prefWidth="${tableView.width*0.35}" text="Documento" />
+            <TreeTableColumn fx:id="commissionColumn" editable="false" maxWidth="${tableView.width*0.30}" minWidth="${tableView.width*0.10}" prefWidth="${tableView.width*0.25}" text="Comisón" />
+            <TreeTableColumn fx:id="documentTypeColumn" editable="false" maxWidth="${tableView.width*0.15}" minWidth="${tableView.width*0.05}" prefWidth="${tableView.width*0.18}" text="Tipo" />
+            <TreeTableColumn fx:id="downloadColumn" editable="false" maxWidth="${tableView.width*0.12}" minWidth="${tableView.width*0.06}" prefWidth="${tableView.width*0.15}" sortable="false" />
+         </columns>
+         <columnResizePolicy>
+            <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </JFXTreeTableView>
+   </children>
+   <stylesheets>
+      <URL value="@../../../css/application/general.css" />
+      <URL value="@../../../css/application/table.css" />
+   </stylesheets>
+</GridPane>

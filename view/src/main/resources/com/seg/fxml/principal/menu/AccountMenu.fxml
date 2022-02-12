@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.SVGPath?>
+
+<GridPane prefHeight="600.0" prefWidth="300.0" styleClass="darkblue-background" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seg.view.controller.principal.menu.AccountMenuController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" percentHeight="35.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="8.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="8.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <ToggleButton fx:id="accountToggleBtn" alignment="CENTER_LEFT" graphicTextGap="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accountBtnClick" styleClass="menu-btn" text="Mis datos" GridPane.rowIndex="1">
+         <graphic>
+            <SVGPath fx:id="accountSvg" content="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v1c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-1c0-2.66-5.33-4-8-4z" />
+         </graphic>
+         <toggleGroup>
+            <ToggleGroup fx:id="menuTogglegroup" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton alignment="CENTER_LEFT" graphicTextGap="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#documentBtnClick" styleClass="menu-btn" text="Mis archivos" toggleGroup="$menuTogglegroup" GridPane.rowIndex="2">
+         <graphic>
+            <SVGPath fx:id="documentSvg" content="M10.59 4.59C10.21 4.21 9.7 4 9.17 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-1.41-1.41z" />
+         </graphic>
+      </ToggleButton>
+   </children>
+   <stylesheets>
+      <URL value="@../../../css/application/menu.css" />
+      <URL value="@../../../css/application/general.css" />
+   </stylesheets>
+</GridPane>

@@ -1,0 +1,210 @@
+@import 'root.css';
+
+/* ----------- General ----------- */
+
+.sort-label{
+    -fx-font-size: 0.9em;
+    -fx-font-family: "Arial";     
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(80, 80, 80, 0.75);    
+}
+
+.search-box{
+    -fx-border-radius: 1em;
+    -fx-border-width: 0.1em;
+    -fx-border-color: -gray-border;
+    -fx-background-color: white;
+    -fx-background-radius: 1em;
+}
+
+.search-textfield{    
+    -fx-font-family: "Open Sans Medium";
+    -fx-font-size:  1em;
+    -fx-text-fill: #616161e6;
+    -fx-prompt-text-fill: rgba(150, 146, 146, 0.9);   
+    -jfx-focus-color: transparent;
+    -jfx-unfocus-color: transparent; 
+}
+
+.refresh-btn{
+    -fx-background-color: rgba(221, 221, 221, 0.2);
+    -fx-font-family: "Lato";    
+    -fx-font-size: 1em;
+    -fx-text-fill: rgb(49, 49, 49);
+    -fx-border-width: 0.1em;
+    -fx-border-radius: 2;
+    -fx-border-color: -gray-border;
+}
+
+.refresh-btn .jfx-rippler{
+    -jfx-rippler-fill: rgba(206, 200, 200, 0.8);
+}
+
+.refresh-btn:hover, .refresh-btn:focus{
+    -fx-background-color: rgba(221, 221, 221, 0.5);
+}
+
+.glass-btn{    
+    -fx-background-color: transparent;
+    -fx-background-radius: 1em;
+}
+
+.glass-btn SVGPath{
+    -fx-fill: rgba(27, 48, 117, 0.4);
+}
+
+.bottom-border{
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: -gray;
+}
+
+.table{
+    -color-texto: rgb(58, 58, 58, 0.8);
+}
+
+.table, .table .column-header-background .filler, .table .tree-table-row-cell:even{
+    -fx-background-color: white;
+}
+
+.table .corner{
+    -fx-background-color: -blue;
+}
+
+.table .column-header{        
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: rgb(211, 211, 211);
+}
+
+.table .column-header .label{
+    -fx-alignment: CENTER_LEFT;    
+    -fx-font-family: "Open Sans Medium";
+    -fx-text-fill: rgb(138, 138, 138);
+    -fx-font-size: 0.85em;    
+}
+
+.table .tree-table-cell{            
+    -fx-font-size: 1em;
+    -fx-font-family: "Lato";
+    -fx-text-fill: -color-texto;
+}
+
+.table .tree-table-row-cell:odd{
+    -fx-background-color: rgba(246, 248, 250, 0.6);
+}
+
+.table .tree-table-row-cell:odd:selected, .table .tree-table-row-cell:even:selected{
+    -fx-background-color: rgba(182, 212, 252, 0.5);
+}
+
+
+/* ----------- Commission View ----------- */
+
+.add-btn{
+    -fx-background-color: -blue;        
+    -fx-background-radius: 2;     
+    -fx-font-family: "Lato";
+    -fx-font-size: 1em;    
+    -fx-text-fill: white;            
+    -fx-effect: dropshadow(three-pass-box, rgba(27, 54, 112, 0.8), 0, 1, 0, 3);   
+}
+
+.add-btn:hover, .add-btn:focus{
+    -fx-background-color :#5A9BFC;     
+}
+
+.edit-btn{    
+    -fx-background-color: rgba(211, 211, 211, 0.3);
+    -fx-background-radius: 2;     
+    -fx-font-family: "Lato";
+    -fx-font-size: 1em;
+    -fx-font-weight: bold;   
+    -fx-text-fill: -blue;       
+    -fx-border-width: 0.1em;
+    -fx-border-radius: 2;
+    -fx-border-color: -gray-border;     
+}
+
+.edit-btn .jfx-rippler{
+    -jfx-rippler-fill: rgb(31, 54, 131);
+}
+
+.edit-btn:hover, .edit-btn:focus{
+    -fx-background-color: rgb(195, 216, 245);    
+    -fx-text-fill: -blue2;    
+}
+
+.delete-btn{        
+    -fx-background-color: rgba(211, 211, 211, 0.3);
+    -fx-background-radius: 2;     
+    -fx-font-family: "Lato";
+    -fx-font-size: 1em;
+    -fx-font-weight: bold;   
+    -fx-text-fill: #e43a3ade;      
+    -fx-border-width: 0.1em;
+    -fx-border-radius: 2;
+    -fx-border-color: -gray-border;
+}
+
+.delete-btn:hover, .delete-btn:focus{
+    -fx-background-color: rgb(248, 191, 191);    
+    -fx-text-fill: #e91b1b;        
+}
+
+.delete-btn .jfx-rippler{
+    -jfx-rippler-fill: red;
+}
+
+.delete-btn:pressed:hover, .edit-btn:pressed:hover{
+    -fx-text-fill: white;
+}
+
+/* ----------- Manager Table  View ----------- */
+
+.approve-btn{
+    -fx-background-color: #6db36d;        
+    -fx-background-radius: 2;     
+    -fx-font-family: "Lato";
+    -fx-font-size: 1em;    
+    -fx-text-fill: white;            
+    -fx-effect: dropshadow(three-pass-box, rgba(20, 65, 9, 0.8), 0, 1, 0, 3);   
+}
+
+.approve-btn SVGPath {
+    -fx-fill: white;
+}
+
+.approve-btn:hover, .approve-btn:focus{
+    -fx-background-color: rgb(102, 197, 82);
+}
+
+.approve-btn .jfx-rippler{
+    -jfx-rippler-fill: lightgreen;
+}
+
+.disapprove-btn{
+    -fx-background-color: #e94949;
+    -fx-background-radius: 2;     
+    -fx-font-family: "Lato";
+    -fx-font-size: 1em;
+    -fx-font-weight: bold;   
+    -fx-text-fill: white;    
+    -fx-effect: dropshadow(three-pass-box, rgba(20, 65, 9, 0.8), 0, 1, 0, 3);
+}
+
+.disapprove-btn SVGPath {
+    -fx-fill: white;
+}
+
+.disapprove-btn:hover, .disapprove-btn:focus{
+    -fx-background-color: rgb(204, 99, 99);
+}
+
+.disapprove-btn .jfx-rippler{
+    -jfx-rippler-fill: rgb(245, 191, 191);
+}
+
+/* ----------- Runtime CSS ----------- */
+
+.center-column{
+    -fx-alignment: CENTER;
+}

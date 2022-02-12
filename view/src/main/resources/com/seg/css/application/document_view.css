@@ -1,0 +1,79 @@
+@import 'root.css';
+
+/* ----------- General ----------- */
+
+.send-btn{
+    -fx-background-color: -blue;
+    -fx-background-radius: 3;     
+    -fx-font-family: "Lato";
+    -fx-font-size: 1em;
+    -fx-font-weight: bold;   
+    -fx-text-fill: white;        
+    -fx-effect: dropshadow(three-pass-box, rgba(226, 226, 226), 5, 0.5, 0, 3);          
+}
+
+.send-btn:hover{
+    -fx-background-color :#5A9BFC; 
+}
+
+.send-btn SVGPath{
+    -fx-fill: white;
+}
+
+.secondary-btn{    
+    -fx-font-family: "Lato";
+    -fx-font-size: 0.9em;
+    -fx-border-width: 0.1em;
+    -fx-border-color: rgb(197, 197, 197);
+    -fx-effect: dropshadow(three-pass-box, rgba(226, 226, 226, 0.6), 1, 0.4, 0, 2);  
+    -fx-border-radius: 3;     
+}
+
+.secondary-btn:hover{
+    -fx-background-color: -lightgray;
+}
+
+.date-label{
+    -fx-font-size: 1em;
+    -fx-font-family: "Lato";
+}
+
+.current-date-label{
+    -fx-font-size: 1em;
+    -fx-font-family: "Open sans Medium";    
+}
+
+/* ----------- Add Document View ----------- */
+
+.file-cancel-selection:hover{
+    -fx-background-color: rgba(226, 226, 226, 0.6);
+}
+
+.file-cancel-selection:pressed{
+    -fx-background-color: rgba(226, 226, 226, 0.8);
+}
+
+.file-label{
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: -gray;
+    -fx-font-family: "Open Sans Medium";
+    -fx-font-size: 1em;    
+}
+
+.file-seleted-background{
+    -fx-background-color: rgba(191, 188, 188, 0.5);
+}
+
+
+
+.requirements-label{
+    -fx-font-size: 0.9em;
+}
+
+
+/* ----------- See Document View ----------- */
+
+.file-viewer{
+    -fx-border-color: -blue;
+    -fx-background-color: white;
+}

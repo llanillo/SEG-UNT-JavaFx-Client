@@ -1,0 +1,24 @@
+@import 'root.css';
+
+.background{        
+    -fx-background-color: rgb(196, 221, 252);
+    -fx-border-color: rgba(151, 151, 151, 0.8);    
+    -fx-border-width: 0.2em;    
+    -fx-border-style: segments(7);
+    -fx-border-insets: 1em;    
+    -fx-background-radius: 0.5em;
+}
+
+.icon-svg{
+    -fx-fill: rgba(149, 180, 182, 0.8);
+}
+
+.label{
+    -fx-font-size: 1.1em; 
+    -fx-text-fill: rgba(47, 78, 90);    
+    -font-family: 'Arial';
+}
+
+.bold-label {
+    -fx-font-weight: bold;
+}

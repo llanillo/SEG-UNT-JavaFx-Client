@@ -1,0 +1,100 @@
+@import "root.css";
+
+/* ----------- General ----------- */
+.submit-btn{
+    -fx-background-color: -blue;
+    -fx-background-radius: 3;     
+    -fx-font-family: "Arial";
+    -fx-font-size: 0.9em;
+    -fx-font-weight: bold;   
+    -fx-text-fill: white;    
+}
+
+.submit-btn:hover{
+    -fx-background-color :rgb(0, 102, 255);
+}
+
+.back-btn {
+    -fx-background-color: #A8A8A8;
+    -fx-background-radius: 3;     
+    -fx-font-family: "Arial";
+    -fx-font-size: 0.85em;
+    -fx-font-weight: bold;    
+    -fx-text-fill: white;    
+}
+
+.back-btn:hover, .back-btn:pressed{
+    -fx-background-color: #706969;    
+}
+
+.back-btn .jfx-rippler{
+    -jfx-rippler-fill: rgb(215, 216, 216);
+}
+
+/* ----------- Login View ----------- */
+
+.close-btn{
+    -fx-background-color: transparent;
+}
+
+.close-btn SVGPath{
+    -fx-fill: #7c7c7c;
+}
+
+.close-btn:hover SVGPath, .close-btn:pressed SVGPath{
+    -fx-fill:white;
+}
+
+.close-btn:hover{
+    -fx-background-color: #E81123;        
+}
+ 
+.close-btn:pressed:hover, .close-btn:pressed{
+    -fx-background-color: #FB6D79; 
+}
+
+.register-btn{
+    -fx-text-fill: #3398FF;
+    -fx-font-weight: bold;
+    -fx-font-size: 0.95em;
+}
+
+.register-btn:hover, .register-btn:pressed{
+    -fx-underline: true;    
+}
+
+.register-btn:pressed{
+    -fx-text-fill: #0f4faf;
+}
+
+.register-btn .jfx-rippler{
+    -jfx-rippler-fill: rgba(255, 255, 255, 0);
+}
+
+.register-label{
+    -fx-text-fill: #575757;
+    -fx-font-size: 0.9em;
+}
+
+
+/* ----------- Register View ----------- */
+
+/* Validation fields message*/
+.error-label {
+    -fx-font-size: 0.87em;
+}
+
+.reset-btn {
+    -fx-text-fill: #8a8888;
+    -fx-font-weight: bold;    
+    -fx-font-size: 0.95em;    
+}
+
+.reset-btn:hover, .reset-btn:pressed{
+    -fx-text-fill: #5a5a5a;    
+    -fx-underline: true;    
+}
+
+.reset-btn .jfx-rippler{
+    -jfx-rippler-fill: rgba(255, 255, 255, 0);
+}

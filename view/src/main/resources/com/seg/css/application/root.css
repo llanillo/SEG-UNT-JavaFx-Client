@@ -1,0 +1,16 @@
+@import "font.css";
+
+.root {
+    /* Default font */
+    -fx-font-family: "Roboto";            
+
+    /* General colors */        
+    -gray: #B7B7B7;     
+    -lightgray: rgba(226, 226, 226, 0.35);    
+    -blue: #3888FF;
+    -blue2: #2965be;        
+    -darkblue: #1E2532;
+    
+    /* Border colors*/
+    -gray-border: rgba(221, 221, 221, 0.8);
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.seg</groupId>
+		<artifactId>seg-client</artifactId>
+		<version>0.0.1-SNAPSHOT</version>		
+	</parent>
+	
+	<artifactId>application</artifactId>	
+	<name>application</name>
+	<description>Main container</description>
+
+	<dependencies>                        
+        <!-- Modules -->
+        <dependency>
+            <groupId>com.seg</groupId>
+            <artifactId>client</artifactId>
+            <version>${project.version}</version>            
+        </dependency>		
+
+        <dependency>
+            <groupId>com.seg</groupId>
+            <artifactId>configuration</artifactId>
+            <version>${project.version}</version>
+        </dependency>  
+
+        <dependency>
+            <groupId>com.seg</groupId>
+            <artifactId>domain</artifactId>
+            <version>${project.version}</version>            
+        </dependency>        
+
+        <dependency>
+            <groupId>com.seg</groupId>
+            <artifactId>preloader</artifactId>
+            <version>${project.version}</version>            
+        </dependency>     	
+
+        <dependency>
+            <groupId>com.seg</groupId>
+            <artifactId>precaution</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.seg</groupId>
+            <artifactId>view</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.seg</groupId>
+            <artifactId>view-container</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <jvmArguments>--add-opens java.base/java.lang.reflect=ALL-UNNAMED</jvmArguments>
+                    <jvmArguments>--add-opens java.base/java.lang.reflect=com.jfoenix</jvmArguments>        
+                    
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>      
+                    </excludes>                           
+                </configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

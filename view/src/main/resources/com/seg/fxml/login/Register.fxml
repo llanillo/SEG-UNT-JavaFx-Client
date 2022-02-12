@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="5.0" prefHeight="500.0" prefWidth="400.0" styleClass="white-fill" vgap="5.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seg.view.controller.login.register.RegisterController">
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" percentHeight="11.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="6.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="6.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="6.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="2.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="4.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="13.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="35.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="4.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="35.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="13.0" prefWidth="100.0" />
+   </columnConstraints>
+   <children>
+      <JFXTextField fx:id="nameTextField" focusColor="#3888ff" labelFloat="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Nombre(s)" styleClass="txtfield" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <JFXTextField fx:id="lastnameTextfield" focusColor="#3888ff" labelFloat="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Apellido(s)" styleClass="txtfield" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <JFXTextField fx:id="emailTextField" focusColor="#3888ff" labelFloat="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Email" styleClass="txtfield" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+      <JFXTextField fx:id="dniTextfield" focusColor="#3888ff" labelFloat="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="DNI" styleClass="txtfield" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <JFXTextField fx:id="cuilTextfield" focusColor="#3888ff" labelFloat="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Cuil" styleClass="txtfield" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <MenuButton fx:id="menuCareer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="menubutton" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <MenuButton fx:id="menuCommission" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="menubutton" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+      <JFXPasswordField fx:id="passwordTextfield" focusColor="#3888ff" labelFloat="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Contraseña" styleClass="txtfield" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="9" />
+      <JFXPasswordField fx:id="passwordRepTextfield" focusColor="#3888ff" labelFloat="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Repetir contraseña" styleClass="txtfield" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="11" />
+      <JFXButton fx:id="submitBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#submitBtnClick" styleClass="submit-btn" text="Enviar" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
+      <JFXButton maxHeight="1.7976931348623157E308" onAction="#resetBtnClick" styleClass="reset-btn" text="Restablecer los campos" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
+      <JFXButton maxHeight="1.7976931348623157E308" onAction="#backBtnClick" styleClass="register-btn" text="¿Ya tienes cuenta?" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="RIGHT" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
+      <Label fx:id="errorLabel" styleClass="error-message" text="MENSAJE_ADVERTENCIA" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+   </children>
+   <stylesheets>
+      <URL value="@../../css/application/general.css" />
+      <URL value="@../../css/application/login.css" />
+   </stylesheets>
+</GridPane>

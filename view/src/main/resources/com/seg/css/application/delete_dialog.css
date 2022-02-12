@@ -1,0 +1,29 @@
+.accept-btn{
+    -fx-background-color: -blue;
+    -fx-background-radius: 3;     
+    -fx-font-family: "Arial";
+    -fx-font-size: 0.9em;
+    -fx-font-weight: bold;   
+    -fx-text-fill: white;    
+}
+
+.accept-btn:hover{
+    -fx-background-color :rgb(0, 102, 255);
+}
+
+.cancel-btn {
+    -fx-background-color: #A8A8A8;
+    -fx-background-radius: 3;     
+    -fx-font-family: "Arial";
+    -fx-font-size: 0.85em;
+    -fx-font-weight: bold;    
+    -fx-text-fill: white;    
+}
+
+.cancel-btn:hover, .cancel-btn:pressed{
+    -fx-background-color: #706969;    
+}
+
+.cancel-btn .jfx-rippler{
+    -jfx-rippler-fill: rgb(215, 216, 216);
+}

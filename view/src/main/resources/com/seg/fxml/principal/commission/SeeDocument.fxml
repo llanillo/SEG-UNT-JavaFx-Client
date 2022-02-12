@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.SVGPath?>
+
+<GridPane fx:id="gridPane" prefHeight="600.0" prefWidth="800.0" styleClass="gray-background" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seg.view.controller.principal.commission.SeeDocumentController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="2.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="4.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="22.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="4.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="4.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="2.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="2.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="8.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="4.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="2.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="3.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="ALWAYS" />
+      <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="2.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="3.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="4.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="4.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Region prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowSpan="2">
+         <styleClass>
+            <String fx:value="pane-shadow" />
+            <String fx:value="white-background" />
+         </styleClass></Region>
+      <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.columnSpan="7" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="titleLabel" styleClass="title-label" text="TITULO_DOCUMENTO" />
+            <Label fx:id="commissionLabel" styleClass="subtitle-label" text="(NOMBRE_COMISION)" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="1">
+         <children>
+            <Label styleClass="date-label" text="Fecha:  " />
+            <Label fx:id="dateLabel" styleClass="current-date-label" text="FECHA_ACTUAL" />
+         </children>
+      </HBox>
+      <Region prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.rowIndex="3" GridPane.rowSpan="15">
+         <styleClass>
+            <String fx:value="white-background" />
+            <String fx:value="pane-shadow" />
+         </styleClass>
+      </Region>
+      <JFXTextField fx:id="authorTextfield" editable="false" focusColor="#405aa800" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Autor" styleClass="txtfield" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="4" />
+      <JFXTextField editable="false" focusColor="#405aa800" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Co-autores" styleClass="txtfield" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+      <Pane fx:id="authorsPane" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+      <JFXTextField fx:id="documentTypeTextfield" editable="false" focusColor="#405aa800" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Tipo" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="9" />
+      <JFXTextField fx:id="titleTextfield" labelFloat="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Título" styleClass="txtfield" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="11" />
+      <JFXTextArea fx:id="descriptionTextarea" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Breve descripción" styleClass="txtfield" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="13" GridPane.rowSpan="4" />
+      <JFXButton fx:id="downloadBtn" graphicTextGap="7.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#downloadBtnClick" prefHeight="${raiz.height*0.05}" styleClass="send-btn" text="Descargar" GridPane.columnIndex="9" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <graphic>
+            <SVGPath fx:id="downloadSvg" content="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+         </graphic>
+      </JFXButton>
+      <JFXButton maxHeight="1.7976931348623157E308" onAction="#bckBtnClick" prefHeight="${raiz.height*0.05}" styleClass="secondary-btn" text="Volver" GridPane.columnIndex="9" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="18" />
+      <Label fx:id="documentSizeLabel" text="TAMAÑO_ARCHIVO" GridPane.columnIndex="9" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+      <Label text="Portada:" GridPane.columnIndex="8" GridPane.columnSpan="3" GridPane.rowIndex="6" />
+      <Region prefHeight="200.0" prefWidth="200.0" styleClass="file-viewer" GridPane.columnIndex="8" GridPane.columnSpan="3" GridPane.rowIndex="8" GridPane.rowSpan="8" />
+      <StackPane fx:id="stackPane" prefHeight="150.0" prefWidth="200.0" styleClass="file-viewer" GridPane.columnIndex="9" GridPane.rowIndex="9" GridPane.rowSpan="6" />
+   </children>
+   <stylesheets>
+      <URL value="@../../../css/application/general.css" />
+      <URL value="@../../../css/application/document_view.css" />
+   </stylesheets>
+</GridPane>

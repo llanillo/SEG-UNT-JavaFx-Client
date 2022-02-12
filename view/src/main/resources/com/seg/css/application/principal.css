@@ -1,0 +1,72 @@
+@import "root.css";
+
+/* ----------- Principal----------- */
+
+.window-border{
+    -fx-background-radius: 0 8 8 0;
+}
+
+.menu-togglebutton{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+}
+
+.menu-togglebutton SVGPath{
+    -fx-fill: white;
+}
+
+.menu-togglebutton:hover, .menu-togglebutton:selected{
+    -fx-background-color: -darkblue;
+}
+
+/* ----------- Notification control ----------- */
+
+.warning-svg{
+    -fx-fill: #cc3a3a;
+}
+
+/* Spinner */
+.spinner{
+    -fx-background-color: transparent;
+}
+
+.spinner .arc{
+    -fx-stroke: -blue;
+}
+
+/* ----------- Side menu ----------- */
+
+.close-btn, .minimize-btn{
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+}
+
+.close-btn SVGPath, .minimize-btn SVGPath{
+    -fx-fill: #7c7c7c;
+}
+
+.close-btn:hover SVGPath, .close-btn:pressed SVGPath{
+    -fx-fill:white;
+}
+
+.close-btn:hover{
+    -fx-background-color: #E81123;        
+}
+ 
+.close-btn:pressed:hover, .close-btn:pressed{
+    -fx-background-color: #FB6D79; 
+}
+
+.minimize-btn:hover{
+    -fx-background-color: #DCDCDD;
+}
+
+.minimize-btn:pressed{
+    -fx-background-color: #C2C4C7;
+}
+
+.logo-border{
+    -fx-border-color: rgba(114, 113, 113, 0.439);
+    -fx-border-width: 0 0 0.1em 0;
+    -fx-padding: 0.1em 0 0 0;
+}

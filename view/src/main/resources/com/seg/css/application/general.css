@@ -1,0 +1,88 @@
+@import "root.css";
+
+/* ----------- Background colors----------- */
+.lightblue-background{
+    -fx-background-color: #5EBEFF;
+}
+
+.white-background{
+    -fx-background-color: white;
+}
+
+.blue-background{
+    -fx-background-color: -blue;
+}
+
+.lightgray-background{
+    -fx-background-color: rgba(226, 226, 226, 0.40);
+}
+
+.gray-background{
+    -fx-background-color: rgba(226, 226, 226, 0.8);
+}
+
+.dark-background{
+    -fx-background-color: rgba(99, 99, 99, 0.5);
+}
+
+.darkblue-background{
+    -fx-background-color: -darkblue;
+}
+
+.white-fill{
+    -fx-fill: white;    
+}
+
+/* ----------- Labels ----------- */
+.error-message{
+    -fx-font-size: 1em;
+    -fx-text-fill: red;
+}
+
+.title-label{
+    -fx-font-size: 1.4em;
+    -fx-font-family: "Lato";     
+}
+
+.subtitle-label{
+    -fx-font-size: 1.3em;
+    -fx-font-family: "Lato";     
+    -fx-text-fill: -gray;    
+}
+
+/* ----------- Shadow below pane ----------- */
+
+.pane-shadow{
+    -fx-border-color: rgba(173, 173, 173, 0.5);
+    -fx-border-width: 0 0 1 0;    
+    -fx-effect: dropshadow(three-pass-box, rgba(173, 173, 173, 0.8), 5, 0, 0, 1);    
+}
+
+/* ----------- Boxes ----------- */
+
+.comboBox{
+    -fx-font-size: 0.95em;
+    -fx-text-fill: black;
+    -fx-background-color : transparent;
+}
+
+.checkbox{
+    -fx-text-fill: black;
+    -fx-font-size: 0.9em;
+}
+
+/* ----------- Text fields ----------- */
+
+.txtfield{
+    -fx-font-size: 0.9em;
+    -fx-text-fill: black;    
+}
+
+/* ----------- Runtime CSS ----------- */
+.menubutton{
+    -fx-font-size: 0.95em;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 1 0;   
+    -fx-background-color : transparent;
+}

@@ -1,0 +1,22 @@
+@import 'root.css';
+
+.welcomeLabel, .userLabel{
+    -fx-font-family: "Poppins Medium";            
+}
+
+.welcomeLabel{
+    -fx-font-size: 1.3em;
+    -fx-text-fill: rgba(119, 119, 119, 0.9);    
+}
+
+.userLabel{
+    -fx-font-size: 1.5em;    
+    -fx-font-family: "Open Sans SemiBold";    
+    -fx-text-fill: rgba(56, 56, 56, 0.9);
+}
+
+.subtitle-label{
+    -fx-font-size: 1.2em;
+    -fx-text-fill: #9B9B9B;
+    -fx-font-weight: bold;
+}

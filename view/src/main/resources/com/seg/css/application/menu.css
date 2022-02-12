@@ -1,0 +1,26 @@
+.menu-btn{    
+    -fx-background-color: transparent;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-font-size: 1em;    
+    -fx-text-fill: -gray;
+    -fx-background-radius: 0;
+    -fx-padding: 0 0 0 3em;
+}
+
+.menu-btn:selected{
+    -fx-background-color: white;     
+    -fx-font-color: black;
+}
+
+.menu-btn:hover, .menu-btn:selected{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.menu-btn SVGPath{
+    -fx-fill: -gray;
+}
+
+.menu-btn:hover SVGPath, .menu-btn:selected SVGPath{
+    -fx-fill: black;
+}
