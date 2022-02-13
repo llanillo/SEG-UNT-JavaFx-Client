@@ -1,14 +1,13 @@
 package com.seg.domain.manager.impl;
 
-import static com.seg.domain.manager.utils.DocumentUtils.createBytesArray;
-
-import java.io.File;
-import java.time.LocalDateTime;
-
 import com.seg.domain.commission.dto.CommissionSummary;
 import com.seg.domain.document.dto.DocumentProperties;
 import com.seg.domain.enumeration.DocumentType;
+import com.seg.domain.manager.utils.DocumentUtils;
 import com.seg.domain.user.dto.UserBasic;
+
+import java.io.File;
+import java.time.LocalDateTime;
 
 public final class DocumentManager {
  
@@ -22,7 +21,7 @@ public final class DocumentManager {
         documentProperties.setCommission(commission);
         documentProperties.setAuthor(author);
         documentProperties.setDocumentType(documentType);
-        documentProperties.setData(createBytesArray(file));   
+        documentProperties.setData(DocumentUtils.createBytesArray(file));
         return documentProperties;
     }          
 }

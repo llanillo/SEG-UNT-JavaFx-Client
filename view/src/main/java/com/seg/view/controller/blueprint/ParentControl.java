@@ -1,14 +1,11 @@
 package com.seg.view.controller.blueprint;
 
+import com.seg.viewcontainer.principal.manager.SceneManager;
+import javafx.scene.Node;
+import lombok.RequiredArgsConstructor;
+
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import com.seg.viewcontainer.principal.manager.SceneManager;
-
-import javafx.event.EventHandler;
-import javafx.scene.Node;
-import javafx.scene.input.MouseEvent;
-import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public abstract class ParentControl extends Control implements IParentControl{        
@@ -25,19 +22,13 @@ public abstract class ParentControl extends Control implements IParentControl{
     }
 
     protected void movableNode(final Node node){
-        node.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(final MouseEvent event) {
-                xOffset = event.getSceneX();
-                yOffset = event.getSceneY();
-            }
+        node.setOnMousePressed(event -> {
+            xOffset = event.getSceneX();
+            yOffset = event.getSceneY();
         });
-        node.setOnMouseDragged(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(final MouseEvent event) {
-                sceneManager.getStage().setX(event.getScreenX() - xOffset);
-                sceneManager.getStage().setY(event.getScreenY() - yOffset);
-            }
+        node.setOnMouseDragged(event -> {
+            sceneManager.getStage().setX(event.getScreenX() - xOffset);
+            sceneManager.getStage().setY(event.getScreenY() - yOffset);
         });
     }    
 }

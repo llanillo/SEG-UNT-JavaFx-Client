@@ -184,7 +184,7 @@ public class RegisterController extends EditorControl implements RegisterControl
         passwordRepTextfield.setTextFormatter(new Formato(15, Tipo.Clave));
     }
 
-    private <T extends Object> void initMenuButton(final List <T> menuList, final MenuButton menuButton, final BooleanProperty menuProperty){
+    private <T> void initMenuButton(final List <T> menuList, final MenuButton menuButton, final BooleanProperty menuProperty){
         for (final T obj : menuList) {
             final CheckMenuItem item = new CheckMenuItem(obj.toString());
 
@@ -197,8 +197,7 @@ public class RegisterController extends EditorControl implements RegisterControl
                         break;
                     }
                 }
-                if (selected > 0) menuProperty.set(true);
-                else menuProperty.set(false);
+                menuProperty.set(selected > 0);
             });
 
             menuButton.getItems().add(item);

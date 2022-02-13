@@ -11,13 +11,12 @@ import java.util.Scanner;
 
 import lombok.experimental.UtilityClass;
 
-@UtilityClass
-public class DocumentUtils {
+public final class DocumentUtils {
     
     private static final String FILE_NOT_FOUND = "File not found";
     private static final String IO_ERROR = "Interrupted IO process";
 
-    public byte[] createBytesArray (final File file){
+    public static byte[] createBytesArray (final File file){
         try{
             final InputStream in =  new FileInputStream(file);
             final ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -43,7 +42,7 @@ public class DocumentUtils {
         return null;
     }    
 
-    public boolean replaceLine (final File file, final String oldStr, final String newStr){           
+    public static boolean replaceLine (final File file, final String oldStr, final String newStr){
         try {
             final Scanner scanner = new Scanner(file);
             final String content = "";

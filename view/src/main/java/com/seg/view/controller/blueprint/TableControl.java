@@ -40,8 +40,8 @@ public abstract class TableControl extends Control{
         throw new RuntimeException("initContextMenu must be overridden");
     }
 
-    protected <T extends Object> void initSortComboBox (final TreeTableView<T> table, 
-    final JFXComboBox<TreeTableColumn<T, ?>> comboBox, final List<TreeTableColumn<T, ?>> columns){
+    protected <T> void initSortComboBox (final TreeTableView<T> table,
+                                         final JFXComboBox<TreeTableColumn<T, ?>> comboBox, final List<TreeTableColumn<T, ?>> columns){
         
         final TreeTableColumn.SortType ascendingOrder = TreeTableColumn.SortType.ASCENDING;
         final TreeTableColumn.SortType descendingOrder = TreeTableColumn.SortType.DESCENDING;
@@ -65,20 +65,19 @@ public abstract class TableControl extends Control{
         comboBox.setButtonCell(initComboBoxCellFactory());  
     }
 
-    private <T extends Object> ListCell<TreeTableColumn<T, ?>> initComboBoxCellFactory(){
-        return new ListCell <TreeTableColumn<T, ?>>(){
+    private <T> ListCell<TreeTableColumn<T, ?>> initComboBoxCellFactory(){
+        return new ListCell<>() {
             @Override
-            protected void updateItem(TreeTableColumn<T, ?> item, boolean empty) {                
+            protected void updateItem(TreeTableColumn<T, ?> item, boolean empty) {
                 super.updateItem(item, empty);
 
-                if (item == null || empty){
+                if (item == null || empty) {
                     setGraphic(null);
                     setText(null);
-                }
-                else{
+                } else {
                     setText(item.getText());
                 }
-            }            
+            }
         };
     }
 

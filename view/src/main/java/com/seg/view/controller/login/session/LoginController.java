@@ -88,7 +88,7 @@ public class LoginController extends EditorControl implements LoginControl{
 
     @FXML
     void passwordTextAction(final ActionEvent event) {
-        submitBtnClick(null);   
+        submitBtnClick(event);
     }
     
     @FXML

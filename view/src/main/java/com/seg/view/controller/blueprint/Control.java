@@ -37,18 +37,16 @@ public abstract class Control implements Initializable{
 
     protected void init() {}
 
-    protected final Window eventWindow(final Event evento){
-        return ((Node) evento.getSource()).getScene().getWindow();
+    protected final Window eventWindow(final Event event){
+        return ((Node) event.getSource()).getScene().getWindow();
     }
 
-    protected final StackPane eventRoot (final ActionEvent evento){
-        return (StackPane) ((Node) evento.getSource()).getScene().getRoot();
+    protected final StackPane eventRoot (final ActionEvent event){
+        return (StackPane) ((Node) event.getSource()).getScene().getRoot();
     }
 
-    protected final void askFocus (final Node nodo){
-        Platform.runLater(() -> {
-            nodo.requestFocus();
-        });
+    protected final void askFocus (final Node node){
+        Platform.runLater(node::requestFocus);
     }
 
     public final StackPane getChildContainer(){

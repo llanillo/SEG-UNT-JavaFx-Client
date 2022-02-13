@@ -20,8 +20,8 @@ public abstract class EditorControl extends Control{
         
     protected static final String MIN_NAME_MESSAGE = "Debe tener al menos " + MIN_NAME_LONG + " caracteres";
     protected static final String MIN_PASSWORD_MESSAGE = "La contraseña debe tener entre " + MIN_PASSWORD_LONG + " y " + MAX_PASSWORD_LONG + " caracteres";
-    protected static final String MIN_CUIL_MESSAGE = "El Cuil debe tener entre " + MIN_CUIL_LONG + " y " + Integer.toString(MIN_CUIL_LONG + 1) + " caracteres";
-    protected static final String MIN_DNI_MESSAGE = "El DNI debe tener entre " + MIN_DNI_LONG + " y " + Integer.toString(MIN_DNI_LONG + 1) + " caracteres";
+    protected static final String MIN_CUIL_MESSAGE = "El Cuil debe tener entre " + MIN_CUIL_LONG + " y " + (MIN_CUIL_LONG + 1) + " caracteres";
+    protected static final String MIN_DNI_MESSAGE = "El DNI debe tener entre " + MIN_DNI_LONG + " y " + (MIN_DNI_LONG + 1) + " caracteres";
     protected static final String INVALID_EMAIL_MESSAGE = "Por favor, introduce un correo electrónico valido";
     protected static final String MATCH_PASSWORD_MESSAGE = "Las contraseñas deben ser iguales";    
 
@@ -33,7 +33,7 @@ public abstract class EditorControl extends Control{
         super.initialize(url, rb);        
     }
 
-    protected boolean emptyFields(){return false;};
+    protected boolean emptyFields(){return false;}
 
     protected final void validateProperty(final JFXTextField ... textFields){
         for (JFXTextField textField : textFields) {

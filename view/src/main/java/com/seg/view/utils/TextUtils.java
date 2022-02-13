@@ -3,12 +3,9 @@ package com.seg.view.utils;
 import java.util.ArrayList;
 import java.util.List;
 
-import lombok.experimental.UtilityClass;
-
-@UtilityClass
-public class TextUtils {    
+public final class TextUtils {
          
-    public String capitalizeInitialLetters (final String text){
+    public static String capitalizeInitialLetters (final String text){
         if (text.length() <= 0)
             return "";
         else{
@@ -37,7 +34,7 @@ public class TextUtils {
         }
     }
 
-    public String createLengthRegexPattern(final int min, final int max){
+    public static String createLengthRegexPattern(final int min, final int max){
         return "^[0-9a-zA-Z]{" + min + "," + max +"}$";
     }
 }

@@ -1,28 +1,24 @@
 package com.seg.view.controller.login.container;
 
-import static com.seg.view.utils.NodeUtils.scaleNode;
-
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import com.seg.view.controller.blueprint.ParentControl;
 import com.seg.view.utils.Dimension;
 import com.seg.viewcontainer.configuration.Path;
 import com.seg.viewcontainer.principal.manager.SceneManager;
-
-import org.springframework.stereotype.Component;
-
 import javafx.animation.FadeTransition;
 import javafx.animation.ParallelTransition;
 import javafx.animation.TranslateTransition;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.SVGPath;
 import javafx.util.Duration;
+import org.springframework.stereotype.Component;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import static com.seg.view.utils.NodeUtils.scaleNode;
 
 @Component
 public class LoginContainerController extends ParentControl implements LoginContainerControl{
@@ -97,19 +93,16 @@ public class LoginContainerController extends ParentControl implements LoginCont
         translateMainContent.setByX(xPosMainContent);
         translateLogo.setByX(xPosLogo);
 
-        fadeOut.setOnFinished(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(final ActionEvent arg0) {     
-                fadeIn.play();
-                
-                if (factor == 1){                    
-                    login.setVisible(false);
-                    register.setVisible(true);
-                }
-                else{                    
-                    login.setVisible(true);
-                    register.setVisible(false);
-                }                
+        fadeOut.setOnFinished(actionEvent -> {
+            fadeIn.play();
+
+            if (factor == 1){
+                login.setVisible(false);
+                register.setVisible(true);
+            }
+            else{
+                login.setVisible(true);
+                register.setVisible(false);
             }
         });
 
