@@ -247,8 +247,7 @@ public class AddDocumentController extends EditorControl implements Logout, Appl
                     comboBox.hide();
                     comboBox.setVisibleRowCount(MAX_COMBO_ROWS);                        
                 }
-                else if (filtered < MAX_COMBO_ROWS) changeComboVisibleRows(filtered, comboBox);
-                else changeComboVisibleRows(MAX_COMBO_ROWS, comboBox);
+                else changeComboVisibleRows(Math.min(filtered, MAX_COMBO_ROWS), comboBox);
             }
         });
 
@@ -457,8 +456,8 @@ public class AddDocumentController extends EditorControl implements Logout, Appl
         final CommissionSummary commissionSummary = new CommissionSummary(null, sessionmanager.getRole());
         final UserBasic userBasic = modelMapper.map(sessionmanager.getUser(), UserBasic.class);
         final DocumentProperties documentProperties = documentManager.create(userBasic, getTxtTitle(), getTxtDescription(), LocalDateTime.now(), getDocumentType(), commissionSummary, file);
-        final UploadDocumentService uploadDocumentSerivce = new UploadDocumentService(documentWebClient, notificationControl, documentProperties, documentList, modelMapper);
-        uploadDocumentSerivce.start();
+        final UploadDocumentService uploadDocumentService = new UploadDocumentService(documentWebClient, notificationControl, documentProperties, documentList, modelMapper);
+        uploadDocumentService.start();
     }
 
     private String getTxtTitle(){
